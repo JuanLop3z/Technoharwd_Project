@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TECNOHARDWModelStoreContainer" CdmEntityContainer="TECNOHARDWEntities">
+    <EntitySetMapping Name="categorias">
+      <EntityTypeMapping TypeName="TECNOHARDWModel.categorias">
+        <MappingFragment StoreEntitySet="categorias">
+          <ScalarProperty Name="cate_cod" ColumnName="cate_cod" />
+          <ScalarProperty Name="cate_tipo" ColumnName="cate_tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientes">
+      <EntityTypeMapping TypeName="TECNOHARDWModel.clientes">
+        <MappingFragment StoreEntitySet="clientes">
+          <ScalarProperty Name="cli_cod" ColumnName="cli_cod" />
+          <ScalarProperty Name="cli_nombre" ColumnName="cli_nombre" />
+          <ScalarProperty Name="cli_apellido" ColumnName="cli_apellido" />
+          <ScalarProperty Name="cli_contacto" ColumnName="cli_contacto" />
+          <ScalarProperty Name="cli_email" ColumnName="cli_email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="factura">
+      <EntityTypeMapping TypeName="TECNOHARDWModel.factura">
+        <MappingFragment StoreEntitySet="factura">
+          <ScalarProperty Name="fact_cod" ColumnName="fact_cod" />
+          <ScalarProperty Name="fact_fecha" ColumnName="fact_fecha" />
+          <ScalarProperty Name="fact_cantidad" ColumnName="fact_cantidad" />
+          <ScalarProperty Name="fact_total" ColumnName="fact_total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventario">
+      <EntityTypeMapping TypeName="TECNOHARDWModel.inventario">
+        <MappingFragment StoreEntitySet="inventario">
+          <ScalarProperty Name="prod_cod" ColumnName="prod_cod" />
+          <ScalarProperty Name="prod_nombre" ColumnName="prod_nombre" />
+          <ScalarProperty Name="prod_cantidad" ColumnName="prod_cantidad" />
+          <ScalarProperty Name="prod_precio" ColumnName="prod_precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="provedores">
+      <EntityTypeMapping TypeName="TECNOHARDWModel.provedores">
+        <MappingFragment StoreEntitySet="provedores">
+          <ScalarProperty Name="prove_cod" ColumnName="prove_cod" />
+          <ScalarProperty Name="prove_nombre" ColumnName="prove_nombre" />
+          <ScalarProperty Name="prove_contacto" ColumnName="prove_contacto" />
+          <ScalarProperty Name="prove_email" ColumnName="prove_email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

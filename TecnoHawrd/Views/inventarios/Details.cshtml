@@ -1,0 +1,58 @@
+﻿@model TecnoHawrd.Models.inventario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>inventario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categorias.cate_tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categorias.cate_tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.provedores.prove_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.provedores.prove_nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.prod_cod }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

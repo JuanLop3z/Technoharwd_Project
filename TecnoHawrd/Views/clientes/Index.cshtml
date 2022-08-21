@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TecnoHawrd.Models.clientes>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cli_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cli_apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cli_contacto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cli_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.factura.fact_cod)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cli_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cli_apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cli_contacto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cli_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.factura.fact_cod)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cli_cod }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cli_cod }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cli_cod })
+        </td>
+    </tr>
+}
+
+</table>

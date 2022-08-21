@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECNOHARDWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="categorias">
+    <Key>
+      <PropertyRef Name="cate_cod" />
+    </Key>
+    <Property Name="cate_cod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cate_tipo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="cli_cod" />
+    </Key>
+    <Property Name="cli_cod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cli_nombre" Type="varchar" MaxLength="50" />
+    <Property Name="cli_apellido" Type="varchar" MaxLength="50" />
+    <Property Name="cli_contacto" Type="int" />
+    <Property Name="cli_email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="factura">
+    <Key>
+      <PropertyRef Name="fact_cod" />
+    </Key>
+    <Property Name="fact_cod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fact_fecha" Type="datetime" />
+    <Property Name="fact_cantidad" Type="int" />
+    <Property Name="fact_total" Type="int" />
+  </EntityType>
+  <EntityType Name="inventario">
+    <Key>
+      <PropertyRef Name="prod_cod" />
+    </Key>
+    <Property Name="prod_cod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prod_nombre" Type="varchar" MaxLength="50" />
+    <Property Name="prod_cantidad" Type="int" />
+    <Property Name="prod_precio" Type="int" />
+  </EntityType>
+  <EntityType Name="provedores">
+    <Key>
+      <PropertyRef Name="prove_cod" />
+    </Key>
+    <Property Name="prove_cod" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prove_nombre" Type="varchar" MaxLength="50" />
+    <Property Name="prove_contacto" Type="int" />
+    <Property Name="prove_email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="fk_categorias">
+    <End Role="factura" Type="Self.factura" Multiplicity="1" />
+    <End Role="categorias" Type="Self.categorias" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="factura">
+        <PropertyRef Name="fact_cod" />
+      </Principal>
+      <Dependent Role="categorias">
+        <PropertyRef Name="cate_cod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_factura">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="1" />
+    <End Role="factura" Type="Self.factura" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="cli_cod" />
+      </Principal>
+      <Dependent Role="factura">
+        <PropertyRef Name="fact_cod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_inventario">
+    <End Role="categorias" Type="Self.categorias" Multiplicity="1" />
+    <End Role="inventario" Type="Self.inventario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="categorias">
+        <PropertyRef Name="cate_cod" />
+      </Principal>
+      <Dependent Role="inventario">
+        <PropertyRef Name="prod_cod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_provedores">
+    <End Role="inventario" Type="Self.inventario" Multiplicity="1" />
+    <End Role="provedores" Type="Self.provedores" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="inventario">
+        <PropertyRef Name="prod_cod" />
+      </Principal>
+      <Dependent Role="provedores">
+        <PropertyRef Name="prove_cod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TECNOHARDWModelStoreContainer">
+    <EntitySet Name="categorias" EntityType="Self.categorias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clientes" EntityType="Self.clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="factura" EntityType="Self.factura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="inventario" EntityType="Self.inventario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="provedores" EntityType="Self.provedores" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_categorias" Association="Self.fk_categorias">
+      <End Role="factura" EntitySet="factura" />
+      <End Role="categorias" EntitySet="categorias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_factura" Association="Self.fk_factura">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="factura" EntitySet="factura" />
+    </AssociationSet>
+    <AssociationSet Name="fk_inventario" Association="Self.fk_inventario">
+      <End Role="categorias" EntitySet="categorias" />
+      <End Role="inventario" EntitySet="inventario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_provedores" Association="Self.fk_provedores">
+      <End Role="inventario" EntitySet="inventario" />
+      <End Role="provedores" EntitySet="provedores" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

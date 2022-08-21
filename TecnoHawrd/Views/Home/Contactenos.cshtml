@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Contactenos";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--barra de navegacion-->
+    <!--Formulario-->
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="container">
+                <h2>Contactenos</h2>
+                <div class="form-group">
+                    <label for="usr">Nombre:</label>
+                    <input type="text" class="form-control" id="usr" placeholder="Digite su nombre">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Celular:</label>
+                    <input type="tel" class="form-control" id="cel" placeholder="Digite su celular">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea class="form-control" rows="5" id="mensaje" placeholder="Digite su Mensaje"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="jumbotron">
+                <h2>Nuestros productos</h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicadores -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <p style="text-align:center"><img src="~/Images/View-Products/Productos/Televisores (2).png" alt="Tv" width="300" height="280"></p>
+                                    <div class="carousel-caption">
+                                        <h4>TV LG 55" Pulgadas 139 cm 55NANO80 4K-UHD NanoCell Plano Smart TV</h4>
+                                    </div>
+
+                                </div>
+
+                                <div class="item">
+                                    <p style="text-align:center"><img src="~/Images/View-Products/Productos/Impresora (2).png" alt="Impre" width="300" height="280"></p>
+                                    <div class="carousel-caption">
+                                        <h4>TV LG 55" Pulgadas 139 cm 55NANO80 4K-UHD NanoCell Plano Smart TV</h4>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <p style="text-align:center"><img src="~/Images/View-Products/Productos/Audifonos (2).png" alt="Audio" width="300" height="280"></p>
+                                    <div class="carousel-caption">
+                                        <h4>Audífonos de Diadema SONY Inalámbricos Bluetooth Cancelación de Ruido Gris</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controles derecha y izquierda -->
+                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Productos";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Productos</h1>
+        <div class="container">
+            <div class="jumbotron">
+                <p>Categorias</p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="~/Images/View-Products/Icono-Monitores.png" class="img-circle" alt="Monitores" width="260" height="100">
+                            <ul>
+                                <li><h3>@Html.ActionLink("Monitores", "Monitores", "Home")</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="~/Images/View-Products/Icono-Servidor.png" class="img-circle" alt="Servidor" width="180" height="100">
+                            <ul>
+                                <li><h3>@Html.ActionLink("Servidores", "Servidores", "Home")</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="~/Images/View-Products/Icono-Impresora.png" class="img-circle" alt="Impresora" width="180" height="100">
+                            <ul>
+                                <li><h3>@Html.ActionLink("Impresoras", "Impresoras", "Home")</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="~/Images/View-Products/Icono-Camaras.png" class="img-circle" alt="Camara" width="120" height="100">
+                            <ul>
+                                <li><h3>@Html.ActionLink("Camaras", "Camaras", "Home")</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="~/Images/View-Products/Icono-Televisor.png" class="img-circle" alt="Televisor" width="120" height="100">
+                            <ul>
+                                <li><h3>@Html.ActionLink("Televisores", "Televisores", "Home")</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="~/Images/View-Products/Icono-Audio.png" class="img-circle" alt="Airpods" width="120" height="100">
+                            <ul>
+                                <li><h3>@Html.ActionLink("Audio", "Audio", "Home")</h3></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

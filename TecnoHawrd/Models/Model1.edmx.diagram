@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="09a681fda34d498cb725f47dd9b428a0" Name="Diagram1">
+        <EntityTypeShape EntityType="TECNOHARDWModel.categorias" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECNOHARDWModel.clientes" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECNOHARDWModel.factura" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECNOHARDWModel.inventario" Width="1.5" PointX="7.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECNOHARDWModel.provedores" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="TECNOHARDWModel.fk_categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="TECNOHARDWModel.fk_inventario" ManuallyRouted="false" />
+        <AssociationConnector Association="TECNOHARDWModel.fk_factura" ManuallyRouted="false" />
+        <AssociationConnector Association="TECNOHARDWModel.fk_provedores" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

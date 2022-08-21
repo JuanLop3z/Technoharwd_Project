@@ -1,0 +1,64 @@
+﻿@model TecnoHawrd.Models.inventario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>inventario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categorias.cate_tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categorias.cate_tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.provedores.prove_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.provedores.prove_nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
